@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script displays all running processes with full start time and command in tree view
+# Displays all running processes, for all users, in a user-friendly format and shows process hierarchy
 
-ps -eo user,lstart,command --forest | sed '1s/STARTED/STARTED /'
+ps -eo user,pid,ppid,cmd --forest
